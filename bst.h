@@ -14,15 +14,15 @@ struct Node {
     Node(T data);
 };
 
+//Constructor
 template <typename T>
 Node<T>::Node(T data){
-        //Constructor
         this->data = data;
         this->left = nullptr;
         this->right = nullptr;
-    }
+}
     
-//Main BST Class containing methods
+//Main BST Class
 template <typename T>
 class BST {
     public:
@@ -81,11 +81,13 @@ void BST<T>::Empty(Node<T>* root) {
     }
 }
 
+//Public Insert method
 template <typename T>
 Node<T>* BST<T>::Insert(T data) {
     return Insert(root, data);
 }
 
+//Private helper method
 template <typename T>
 Node<T>* BST<T>::Insert(Node<T>* root, T data) {
     if (root == nullptr) {
