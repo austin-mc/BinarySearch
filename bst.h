@@ -106,7 +106,7 @@ Node<T>* BST<T>::Insert(Node<T>* root, T data) {
     return root;
 }
 
-//Public Find method
+//Public Find method. Returns a nullptr if value isn't found.
 template <typename T>
 Node<T>* BST<T>::Find(T data) {
     return Find(root, data);
