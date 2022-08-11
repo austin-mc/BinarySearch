@@ -106,11 +106,13 @@ Node<T>* BST<T>::Insert(Node<T>* root, T data) {
     return root;
 }
 
+//Public Find method
 template <typename T>
 Node<T>* BST<T>::Find(T data) {
     return Find(root, data);
 }
 
+//Private helper method
 template <typename T>
 Node<T>* BST<T>::Find(Node<T>* root, T data) {
     if (root == nullptr) {
@@ -126,13 +128,14 @@ Node<T>* BST<T>::Find(Node<T>* root, T data) {
     }
 }
 
+//Public Remove method
 template <typename T>
 Node<T>* BST<T>::Remove(T data) {
     root = Remove(root, data);
     return root;
 }
 
-
+//Private helper method
 template <typename T>
 Node<T>* BST<T>::Remove(Node<T>* root, T data) {
     if (root == nullptr) {
@@ -171,6 +174,7 @@ Node<T>* BST<T>::Remove(Node<T>* root, T data) {
     return root;
 }
 
+//Find the right most node in the left subtree
 template <typename T>
 Node<T>* BST<T>::FindPredecessor(Node<T>* root) {
     if (root->right == nullptr) {
@@ -180,6 +184,7 @@ Node<T>* BST<T>::FindPredecessor(Node<T>* root) {
     }
 }
 
+//Public print method
 template <typename T>
 void BST<T>::Print() {
     if (root == nullptr) {
@@ -190,6 +195,7 @@ void BST<T>::Print() {
     }
 }
 
+//Private helper method
 template <typename T>
 void BST<T>::Print(Node<T>* root) {
     if (root == nullptr) {
